@@ -12,7 +12,7 @@ if(!file.exists("./data")){
 name <- "exdata_data_household_power_consumption"
 unzip(zipfile = paste0("./data/", name, ".zip"), exdir = paste0(getwd(), "./data"))
 
-##Read File filtere by SQL.
+##Read File filtered by SQL.
 #Read a file into R filtering an sql statement. Only the filtered portion is processed by R.
 data_electricpower <- read.csv.sql("./data/household_power_consumption.txt",
                                    sql = "select * from file where Date = '1/2/2007' or Date = '2/2/2007'",
